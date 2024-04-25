@@ -9,6 +9,8 @@ export class DataserviceService {
 
   constructor(private http:HttpClient) { }
 
+  permitido_entrar:boolean=false;
+
   comprobarLoggin(nombre_equipo1:string, contrasenna1:string):any{
     return this.http.get<any>('http://localhost/Backend_David/validar_login.php', { params: { nombre_equipo: nombre_equipo1, contrasenna:contrasenna1 } });
   } 

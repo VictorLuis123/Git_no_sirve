@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataserviceService } from './dataservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  constructor(private servicio:DataserviceService){}
+
+  puedeEntrar(){
+    return this.servicio.permitido_entrar;
+  }
 
   
 }

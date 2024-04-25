@@ -8,8 +8,11 @@
           <a class="nav-link" routerLink="./" >Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="./participantes">Participantes</a>
+          <a *ngIf="puedeEntrar()" class="nav-link"  routerLink="./participantes" >Participantes</a>
+          <a *ngIf="puedeEntrar()==false" class="nav-link"   >Participantes( registrarse antes)</a>
+
         </li>
+        
       </ul>
     </div>
   </div>

@@ -19,7 +19,8 @@ export class LoginComponent {
         console.log(response);
         if(response[0].mensaje=='existe'){
         alert('Puede entrar al sistema');
-         this.navigateToVistaConcursante();
+        this.dataservice.permitido_entrar=true;  
+        this.navigateToVistaConcursante();
         }else{
         alert('No puedesss')
 

@@ -8,11 +8,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { VistaConcursantesComponent } from './vista-concursantes/vista-concursantes.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { CoachComponent } from './coach/coach.component';
 
 
 const routes: Routes = [
   {path: '',component: LoginComponent},
   { path: 'participantes', component: VistaConcursantesComponent }, 
+  { path: 'coaches', component: CoachComponent }, 
   // Agrega aquí otras rutas necesarias para tu aplicación
 ];
 
@@ -21,7 +23,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     VistaConcursantesComponent,
-    LoginComponent
+    LoginComponent,
+    CoachComponent
   ],
   imports: [
     HttpClientModule,

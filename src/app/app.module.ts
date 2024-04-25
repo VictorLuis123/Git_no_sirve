@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataserviceService } from './dataservice.service';
-import { VistaConcursantesComponent } from './vista-concursantes/vista-concursantes.component';
 import { Routes, RouterModule } from '@angular/router';
+
+import { VistaConcursantesComponent } from './vista-concursantes/vista-concursantes.component';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  {path: '',component: AppComponent},
-  { path: 'vista_concursante', component: VistaConcursantesComponent }, 
+  {path: '',component: LoginComponent},
+  { path: 'participantes', component: VistaConcursantesComponent }, 
   // Agrega aquí otras rutas necesarias para tu aplicación
 ];
 
@@ -18,7 +20,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    VistaConcursantesComponent
+    VistaConcursantesComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +29,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule],
+  //exports: [RouterModule],
   providers: [DataserviceService],
   bootstrap: [AppComponent]
 })

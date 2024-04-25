@@ -1,0 +1,89 @@
+<p>login works!</p>
+<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!-- <link rel="stylesheet" href="login2.css" /> -->
+    <link rel="icon" />
+    <!-- href="./images/logo.png" /> -->
+    <title>ICPC | Registrarse</title>
+  </head>
+  <body>
+    <div id="left">
+      <h1>Welcome to contest world!</h1>
+      <div class="logo">
+        <!-- <img src="images/logo.png" alt="logo" style="width: 300px;height: 100px;" /> -->
+        ICPC
+      </div>
+      <div class="sign-up">
+        <h3>sign-In</h3>
+
+        <form #loggin_equipo="ngForm" (ngSubmit)="submitFormTeam(loggin_equipo.value)">
+          <div class="form-field">
+            <span class="material-symbols-outlined"> email </span>
+            <input type="text" placeholder="Your team name" name="nombre" ngModel required  />
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined"> lock </span>
+            <!-- <span class="material-symbols-outlined">  </span> -->
+            <input
+              type="password"
+              class="pass_input"
+              placeholder="Password"
+              name="contrasenna"
+              ngModel
+              required
+            />
+            <span
+              class="material-symbols-outlined eye-icon"
+            >
+              visibility
+            </span>
+          </div>
+
+          <div id="pass-meter">
+            <span id="meter-outer">
+              <span id="meter-inner"></span>
+            </span>
+
+            <span id="pwd-desc"></span>
+          </div>
+          <button type="submit">Sign In</button>
+          <button type="submit">Are you a couch? </button>  
+        </form>
+        <button type="button" (click)="navigateToVistaConcursante()">Sign In</button>
+       
+
+
+        <a href="#">Forgot password?</a>
+
+        <div id="divider">
+          <div></div>
+          <span id="divider-text"> or </span>
+          <div></div>
+        </div>
+
+        <!-- <div id="auth-btns">
+          <img src="images/google-btn.svg" alt="Google Sign Up" />
+          <img src="images/facebook-btn.svg" alt="Facebook Sign Up" />
+        </div> -->
+      </div>
+    </div>
+
+    <div id="right"></div>
+
+  </body>
+</html>
+

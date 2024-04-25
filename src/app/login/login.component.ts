@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   constructor(private dataservice:DataserviceService,private router: Router){}
-  submitFormTeam(team_data:{nombre:string, contrasenna:string}){
+  
+  submitFormLogin(team_data:{nombre:string, contrasenna:string}){
     console.log(team_data.nombre)
     console.log(team_data.contrasenna)
 

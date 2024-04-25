@@ -1,37 +1,69 @@
-<form>
+<!-- 
+
+nombre_equipo
+contrasenna_equipo
+nombre_p1
+id_p1
+edad_p1
+sexo_p1
+pais_p1
+
+
+nombre_p2
+id_p2
+edad_p2
+sexo_p2
+pais_p2
+
+nombre_p3
+id_p3
+edad_p3
+sexo_p3
+pais_p3 -->
+
+
+
+
+
+
+<form #formulario_equipo="ngForm" (ngSubmit)="insertTeam(formulario_equipo.value)">
   <br>
   <div class="form-group">
     <p class="fs-5">Nombre del equipo</p>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="nombre del equipo">
+    <input type="text" class="form-control" id="formGroupExampleInput" name="nombre_equipo" placeholder="nombre del equipo" ngModel>
   </div>
 
   <br>
   <div class="form-group">
     <p class="fs-5">Contrasenna del equipo</p>
-    <input type="password" class="form-control"  placeholder="Contrasenna del equipo">
+    <input type="password" class="form-control" name="contrasenna_equipo" placeholder="Contrasenna del equipo" ngModel>
   </div>
 
   <br>
   <p class="fs-5">Primer participante</p>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Nombre completo">
+      <input type="text" class="form-control" name="nombre_p1" placeholder="Nombre completo" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Numero de Identificacion">
+      <input type="number" class="form-control" name="id_p1" placeholder="Numero de Identificacion" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Edad">
+      <input type="number" class="form-control" name="edad_p1" placeholder="Edad" ngModel>
     </div>
     <div class="col">
-      <select class="form-control form-control-md" >
+      <input type="number" class="form-control" name="sexo_p1" placeholder="sexo" ngModel>
+    </div>
+
+    <!-- <div class="col">
+      <select class="form-control form-control-md" name="sexo_p1" >
         <option>Masculino</option>
         <option>Femenino</option>
       </select>
-    </div>
+    </div> -->
 
     <div class="col">
-      <input type="text" class="form-control" placeholder="Pais">
+      <input type="text" class="form-control" name="pais_p1" placeholder="Pais" ngModel>
     </div>
   </div>
 
@@ -39,23 +71,27 @@
   <p class="fs-5">Segundo participante</p>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Nombre completo">
+      <input type="text" class="form-control" name="nombre_p2" placeholder="Nombre completo" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Numero de Identificacion">
+      <input type="number" class="form-control" name="id_p2" placeholder="Numero de Identificacion" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Edad">
-    </div>
-    <div class="col">
-      <select class="form-control form-control-md" >
-        <option>Masculino</option>
-        <option>Femenino</option>
-      </select>
+      <input type="number" class="form-control" name="edad_p2" placeholder="Edad" ngModel>
     </div>
 
     <div class="col">
-      <input type="text" class="form-control" placeholder="Pais">
+      <input type="number" class="form-control" name="sexo_p2" placeholder="sexo" ngModel>
+    </div>
+    <!-- <div class="col">
+      <select class="form-control form-control-md" name="sexo_p2" >
+        <option>Masculino</option>
+        <option>Femenino</option>
+      </select>
+    </div> -->
+
+    <div class="col">
+      <input type="text" class="form-control" name="pais_p2" placeholder="Pais" ngModel>
     </div>
   </div>
 
@@ -63,23 +99,27 @@
   <p class="fs-5">Tercer participante</p>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Nombre completo">
+      <input type="text" class="form-control" name="nombre_p3" placeholder="Nombre completo" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Numero de Identificacion">
+      <input type="number" class="form-control" name="id_p3" placeholder="Numero de Identificacion" ngModel>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Edad">
-    </div>
-    <div class="col">
-      <select class="form-control form-control-md" >
-        <option>Masculino</option>
-        <option>Femenino</option>
-      </select>
+      <input type="number" class="form-control" name="edad_p3" placeholder="Edad" ngModel>
     </div>
 
     <div class="col">
-      <input type="text" class="form-control" placeholder="Pais">
+      <input type="number" class="form-control" name="sexo_p3" placeholder="sexo" ngModel>
+    </div>
+    <!-- <div class="col">
+      <select class="form-control form-control-md" name="sexo_p3" >
+        <option>Masculino</option>
+        <option>Femenino</option>
+      </select>
+    </div> -->
+
+    <div class="col">
+      <input type="text" class="form-control" name="pais_p3" placeholder="Pais" ngModel>
     </div>
   </div>
   <br>

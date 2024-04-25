@@ -104,14 +104,14 @@ body {
   color: #11161a;
 }
 
-/* #right {
+ #right {
   background-image: 
-  url("images/bg.jpg");
+  url("../../assets/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 65%;
   opacity: 0.8;
-} */
+} 
 
 #pass-meter {
   display: flex;

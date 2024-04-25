@@ -13,6 +13,9 @@ export class AppComponent {
   puedeEntrar(){
     return this.servicio.permitido_entrar;
   }
+  hacerFalso(){
+    this.servicio.permitido_entrar=false;
+  }
 
   
 }

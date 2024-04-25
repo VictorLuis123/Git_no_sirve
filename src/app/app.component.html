@@ -27,10 +27,11 @@
       </div>
       <div class="sign-up">
         <h3>sign-In</h3>
-        <form>
+
+        <form #loggin_equipo="ngForm" (ngSubmit)="submitFormTeam(loggin_equipo.value)">
           <div class="form-field">
             <span class="material-symbols-outlined"> email </span>
-            <input type="email" placeholder="Your email" required id="email_input" />
+            <input type="text" placeholder="Your team name" name="nombre" ngModel required  />
           </div>
           <div class="form-field">
             <span class="material-symbols-outlined"> lock </span>
@@ -40,6 +41,8 @@
               id="pass_input"
               class="pass_input"
               placeholder="Password"
+              name="contrasenna"
+              ngModel
               required
             />
             <span

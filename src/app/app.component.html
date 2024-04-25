@@ -12,7 +12,11 @@
         <li class="nav-item">
           <a *ngIf="puedeEntrar()" class="nav-link"  routerLink="./participantes" >Participantes</a>
           <a *ngIf="puedeEntrar()==false" class="nav-link"   >Participantes( registrarse antes)</a>
+        </li>
 
+        <li class="nav-item">
+          <a *ngIf="puedeEntrar()" class="nav-link"  routerLink="./coaches" >Gestion de equipos</a>
+          <a *ngIf="puedeEntrar()==false" class="nav-link"  >Gestion de equipos ( registrarse antes)</a>
         </li>
         
       </ul>

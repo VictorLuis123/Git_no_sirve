@@ -30,7 +30,7 @@ export class LoginComponent {
 
   navigateToVistaConcursante():void{
     console.log('si entraaaaaa')
-       this.router.navigate(['/vista_concursante'])
+       this.router.navigate(['/participantes'])
 
 
   }

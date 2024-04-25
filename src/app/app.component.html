@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +39,6 @@
             <!-- <span class="material-symbols-outlined">  </span> -->
             <input
               type="password"
-              id="pass_input"
               class="pass_input"
               placeholder="Password"
               name="contrasenna"
@@ -62,6 +62,9 @@
           <button type="submit">Sign In</button>
           <button type="submit">Are you a couch? </button>  
         </form>
+        <button type="button" (click)="navigateToVistaConcursante()">Sign In</button>
+       
+
 
         <a href="#">Forgot password?</a>
 
@@ -82,3 +85,4 @@
 
   </body>
 </html>
+

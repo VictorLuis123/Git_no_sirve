@@ -12,4 +12,7 @@ export class DataserviceService {
   comprobarLoggin(nombre_equipo1:string, contrasenna1:string):any{
     return this.http.get<any>('http://localhost/Backend_David/validar_login.php', { params: { nombre_equipo: nombre_equipo1, contrasenna:contrasenna1 } });
   } 
-}
+  getData(){
+    return this.http.get<any>('http://localhost/Backend_David/mostrar_concursantes.php');
+  }
+ }

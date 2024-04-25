@@ -1,0 +1,13 @@
+<p>vista-concursantes works!</p>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th *ngFor="let atrib of atributos">{{atrib}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let elemento of elementos;let i=index">
+      <th *ngFor="let atrib of atributos"> {{elemento[atrib]}}</th>
+    </tr>
+  </tbody>
+</table>

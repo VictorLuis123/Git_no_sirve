@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DataserviceService } from './dataservice.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { DataserviceService } from './dataservice.service';
 })
 export class AppComponent {
   title = 'my-app';
-  constructor(private dataservice:DataserviceService){}
+  constructor(private dataservice:DataserviceService,private router: Router){}
 
   submitFormTeam(team_data:{nombre:string, contrasenna:string}){
     console.log(team_data.nombre)
@@ -17,11 +19,21 @@ export class AppComponent {
     this.dataservice.comprobarLoggin(team_data.nombre,team_data.contrasenna).subscribe(
       (response:any) => {
         console.log(response);
+        if(response[0].mensaje=='existe'){
         alert('Puede entrar al sistema');
-       },
-       (error: any) =>{
-        alert('No puedessss');
+         this.navigateToVistaConcursante();
+        }else{
+        alert('No puedesss')
+
        }
+      }
     );
+  }
+
+  navigateToVistaConcursante():void{
+    console.log('si entraaaaaa')
+       this.router.navigate(['/vista_concursante'])
+
+
   }
 }
